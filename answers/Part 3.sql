@@ -23,14 +23,14 @@ SELECT count(*)
 FROM pokemons
 JOIN types
 ON pokemons.secondary_type = types.id
-WHERE types.id = '7'
+WHERE types.id = '7';
 
 What are all the primary types and how many pokemon have that type?
 SELECT count(*), types.name
 FROM pokemons
 JOIN types
-ON pokemons.primary_types = types.id
-GROUP BY pokemons.primary_types;
+ON pokemons.primary_type = types.id
+GROUP BY pokemons.primary_type;
 
 How many pokemon at level 100 does each trainer with at least one level 100 pokemone have? (Hint: your query should not display a trainer
 SELECT count(*)
